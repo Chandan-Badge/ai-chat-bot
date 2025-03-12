@@ -3,3 +3,41 @@
     scrollbar-color: #6d4fc2 transparent;
 }
 
+.chat-body .massage .massage-text {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.chat-body .bot-massage {   
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-body .bot-massage .massage-text {
+    background-color: #f6f2ff;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-end-end-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: none;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.chat-body .user-massage {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chat-body .user-massage .massage-text {
+    background-color: #6d4fc2;
+    color: #fff;
+
+    border-start-start-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: none;
+}
