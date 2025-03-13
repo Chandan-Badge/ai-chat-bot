@@ -42,6 +42,8 @@
     border-bottom-right-radius: none;
 }
 
+/* ChatBot Button Effect */
+
 .chatbot-popup {
     transform-origin: bottom right;
 }
@@ -52,7 +54,6 @@
     transform: scale(1);
 }
 
-/*  */
 .show {
     display: flex;
     visibility: visible;
@@ -61,4 +62,5 @@
 .not-show {
     display: hidden;
     visibility: hidden;
+    transform: rotate(90deg);
 }

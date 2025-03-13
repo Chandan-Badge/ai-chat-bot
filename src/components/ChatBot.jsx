@@ -10,7 +10,7 @@ function ChatBot() {
     const [chatHistory, setChatHistory] = useState([]);
     const [showChatBot, setShowChatBot] = useState(false);
 
-    // const [showBtn, setShowBtn] = useState(true);
+    const [showBtn, setShowBtn] = useState(true);
 
     const chatBotRef = useRef();
 
@@ -49,7 +49,14 @@ function ChatBot() {
         }
     };
 
-    // let condition = showBtn ? "show" : "not-show";
+    // Button Change Effect
+    let changeBtn = () => {
+        setShowBtn(!showBtn);
+        setShowChatBot(prev => !prev)
+    }
+
+    let condition1 = showBtn ? "show" : "not-show";
+    let condition2 = showBtn ? "not-show" : "show";
 
     useEffect(() => {
         // Auto-scroll whenever chat history updates
@@ -59,9 +66,9 @@ function ChatBot() {
     return (
         <div className={`container font-[poppins] ${showChatBot ? "show-chatbot" : ""}`}>
 
-        <button onClick={() => setShowChatBot(prev => !prev)} className="chatbot-toggler fixed bottom-8 right-9 border-none h-12 w-12 flex cursor-pointer rounded-full bg-[#6d4fc2] justify-center items-center transition-all duration-100 ease-in">
-            <span className="material-symbols-outlined absolute text-[#fff] focus:rotate-90">mode_comment</span>
-            <span className="material-symbols-outlined absolute text-[#fff]">close</span>
+        <button onClick={changeBtn} className="chatbot-toggler fixed bottom-8 right-9 border-none h-12 w-12 flex cursor-pointer rounded-full bg-[#6d4fc2] justify-center items-center">
+            <span className={`material-symbols-outlined absolute text-[#fff] ${condition1} transition-all duration-200 ease-out`}>mode_comment</span>
+            <span className={`material-symbols-outlined absolute text-[#fff] ${condition2} transition-all duration-200 ease-out`}>close</span>
         </button>
 
             <div className="chatbot-popup fixed opacity-0 pointer-events-none bottom-24 right-9 w-[420px] overflow-hidden bg-[#fff] rounded-lg shadow-lg transition-all scale-50 duration-100 ease-in">
