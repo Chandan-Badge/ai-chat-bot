@@ -67,8 +67,10 @@ function ChatBot() {
         <div className={`container font-[poppins] ${showChatBot ? "show-chatbot" : ""}`}>
 
         <button onClick={changeBtn} className="chatbot-toggler fixed bottom-8 right-9 border-none h-12 w-12 flex cursor-pointer rounded-full bg-[#6d4fc2] justify-center items-center">
-            <span className={`material-symbols-outlined absolute text-[#fff] ${condition1} transition-all duration-200 ease-out`}>mode_comment</span>
-            <span className={`material-symbols-outlined absolute text-[#fff] ${condition2} transition-all duration-200 ease-out`}>close</span>
+            {/* <span className={`material-symbols-outlined absolute text-[#fff] ${condition1} transition-all duration-200 ease-out`}>mode_comment</span> */}
+            <i className={`fa-solid fa-message absolute text-xl text-[#fff] ${condition1} transition-all duration-200 ease-in`}></i>
+            {/* <span className={`material-symbols-outlined absolute text-[#fff] ${condition2} transition-all duration-200 ease-out`}>close</span> */}
+            <i className={`fa-solid fa-xmark absolute text-xl text-[#fff] ${condition2} transition-all duration-200 ease-in`}></i>
         </button>
 
             <div className="chatbot-popup fixed opacity-0 pointer-events-none bottom-24 right-9 w-[420px] overflow-hidden bg-[#fff] rounded-lg shadow-lg transition-all scale-50 duration-100 ease-in">
@@ -80,7 +82,7 @@ function ChatBot() {
                         <h2 className="logo-text text-[#fff] font-bold text-[21px]">ChatBot</h2>
 
                     </div>
-                    <button className="material-symbols-outlined h-10 w-10 border-none outline-none text-[#fff] cursor-pointer text-[28px] pt-1 rounded-full -mr-2 bg-none hover:bg-[#593bab] transition-all duration-200 ease-in-out ">keyboard_arrow_down</button>
+                    <button onClick={changeBtn} className="material-symbols-outlined h-10 w-10 border-none outline-none text-[#fff] cursor-pointer text-[28px] pt-1 rounded-full -mr-2 bg-none hover:bg-[#593bab] transition-all duration-200 ease-in-out ">keyboard_arrow_down</button>
                 </div>
 
                 {/* Chat body */}
