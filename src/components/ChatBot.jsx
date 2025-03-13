@@ -69,8 +69,8 @@ function ChatBot() {
         <button onClick={changeBtn} className="chatbot-toggler fixed bottom-8 right-9 border-none h-12 w-12 flex cursor-pointer rounded-full bg-[#6d4fc2] justify-center items-center">
             {/* <span className={`material-symbols-outlined absolute text-[#fff] ${condition1} transition-all duration-200 ease-out`}>mode_comment</span> */}
             <i className={`fa-solid fa-message absolute text-xl text-[#fff] ${condition1} transition-all duration-200 ease-in`}></i>
-            {/* <span className={`material-symbols-outlined absolute text-[#fff] ${condition2} transition-all duration-200 ease-out`}>close</span> */}
-            <i className={`fa-solid fa-xmark absolute text-xl text-[#fff] ${condition2} transition-all duration-200 ease-in`}></i>
+            <span className={`material-symbols-outlined absolute text-[#fff] ${condition2} transition-all duration-200 ease-out`}>close</span>
+            {/* <i className={`fa-solid fa-xmark absolute text-xl text-[#fff] ${condition2} transition-all duration-200 ease-in`}></i> */}
         </button>
 
             <div className="chatbot-popup fixed opacity-0 pointer-events-none bottom-24 right-9 w-[420px] overflow-hidden bg-[#fff] rounded-lg shadow-lg transition-all scale-50 duration-100 ease-in">

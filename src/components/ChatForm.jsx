@@ -42,9 +42,7 @@ function ChatForm({ chatHistory, setChatHistory, generateBotResponse }) {
             />
             <button 
                 className="material-symbols-outlined h-9 w-9 cursor-pointer text-[20px] text-[#fff] flex-shrink-0 mr-2 rounded-full bg-[#6d4fc2] hover:bg-[#593bab] transition-all duration-200 ease-in-out"
-            >
-                keyboard_arrow_up
-            </button>
+            >arrow_upward</button>
         </form>
     );
 }
