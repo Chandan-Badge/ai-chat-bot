@@ -8,6 +8,9 @@ import './style.css';
 function ChatBot() {
 
     const [chatHistory, setChatHistory] = useState([]);
+    const [showChatBot, setShowChatBot] = useState(false);
+
+    // const [showBtn, setShowBtn] = useState(true);
 
     const chatBotRef = useRef();
 
@@ -46,14 +49,22 @@ function ChatBot() {
         }
     };
 
+    // let condition = showBtn ? "show" : "not-show";
+
     useEffect(() => {
         // Auto-scroll whenever chat history updates
         chatBotRef.current.scrollTo({top: chatBotRef.current.scrollHeight, behavior: "smooth"});
     }, [chatHistory]);
 
     return (
-        <div className="container font-[poppins]">
-            <div className="chatbot-popup relative w-[420px] overflow-hidden bg-[#fff] rounded-lg shadow-lg">
+        <div className={`container font-[poppins] ${showChatBot ? "show-chatbot" : ""}`}>
+
+        <button onClick={() => setShowChatBot(prev => !prev)} className="chatbot-toggler fixed bottom-8 right-9 border-none h-12 w-12 flex cursor-pointer rounded-full bg-[#6d4fc2] justify-center items-center transition-all duration-100 ease-in">
+            <span className="material-symbols-outlined absolute text-[#fff] focus:rotate-90">mode_comment</span>
+            <span className="material-symbols-outlined absolute text-[#fff]">close</span>
+        </button>
+
+            <div className="chatbot-popup fixed opacity-0 pointer-events-none bottom-24 right-9 w-[420px] overflow-hidden bg-[#fff] rounded-lg shadow-lg transition-all scale-50 duration-100 ease-in">
                 {/* ChatBox header  */}
                 <div className="chat-header flex px-6 py-4 items-center justify-between bg-[#6d4fc2]">
                     <div className="header-info flex gap-3 items-center">

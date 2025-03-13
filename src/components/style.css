@@ -41,3 +41,24 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: none;
 }
+
+.chatbot-popup {
+    transform-origin: bottom right;
+}
+
+.container.show-chatbot .chatbot-popup {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+}
+
+/*  */
+.show {
+    display: flex;
+    visibility: visible;
+}
+
+.not-show {
+    display: hidden;
+    visibility: hidden;
+}
