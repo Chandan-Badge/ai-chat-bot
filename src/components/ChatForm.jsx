@@ -15,16 +15,16 @@ function ChatForm({ chatHistory, setChatHistory, generateBotResponse }) {
 
         // Update chat history with user message first
         setChatHistory(newChatHistory);
-
-        // Add a "thinking..." placeholder
-        setChatHistory((history) => [
-            ...history,
-            { role: "model", text: "Thinking..." }
-        ]);
-
+        
         // Delay before generating the bot response
         setTimeout(() => {
-            generateBotResponse(newChatHistory);
+            // Add a "thinking..." placeholder
+            setChatHistory((history) => [
+                ...history,
+                { role: "model", text: "Thinking..." }
+            ]);
+
+            generateBotResponse([...chatHistory, { role: "user", text: `Using the details provided above, please address this query: ${userMessage}` }]);
         }, 600);
     };
 
