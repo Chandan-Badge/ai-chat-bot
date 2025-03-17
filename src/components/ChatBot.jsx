@@ -2,12 +2,19 @@ import ChatBotIcon from "./ChatBotIcon";
 import ChatForm from "./ChatForm";
 import ChatMassage from "./ChatMassage";
 import { useEffect, useRef, useState } from "react";
+import { applicationInfo } from "./applicationInfo";
 
 import './style.css';
 
 function ChatBot() {
 
-    const [chatHistory, setChatHistory] = useState([]);
+    const [chatHistory, setChatHistory] = useState([
+        {
+            hideInChat: true,
+            role: "model",
+            text: applicationInfo
+        }
+    ]);
     const [showChatBot, setShowChatBot] = useState(false);
 
     const [showBtn, setShowBtn] = useState(true);
