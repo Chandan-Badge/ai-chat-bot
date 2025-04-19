@@ -2,7 +2,7 @@ import ChatBotIcon from "./ChatBotIcon";
 import ChatForm from "./ChatForm";
 import ChatMassage from "./ChatMassage";
 import { useEffect, useRef, useState } from "react";
-import { applicationInfo } from "./applicationInfo";
+import { chandanInfo } from "./chandanInfo";
 
 import './style.css';
 
@@ -12,7 +12,7 @@ function ChatBot() {
         {
             hideInChat: true,
             role: "model",
-            text: applicationInfo
+            text: chandanInfo
         }
     ]);
     const [showChatBot, setShowChatBot] = useState(false);
