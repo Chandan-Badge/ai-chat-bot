@@ -1,6 +1,6 @@
 .chat-body {
     scrollbar-width: thin;
-    scrollbar-color: #6d4fc2 transparent;
+    scrollbar-color: #991b1b transparent;
 }
 
 .chat-body .massage .massage-text {
@@ -33,7 +33,7 @@
 }
 
 .chat-body .user-massage .massage-text {
-    background-color: #6d4fc2;
+    background-color: #991b1b;
     color: #fff;
 
     border-start-start-radius: 12px;
@@ -68,3 +68,28 @@
 .error .massage-text {
     color: red;
 }
+
+/* Show chatbot */
+/* .chatbot-popup {
+    transform: scale(0.2);
+    transform-origin: bottom right;
+} */
+
+/* body.show-chatbot .chatbot-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+} */
+
+body .show-chatbot .chatbot-toggler {
+    transform: rotate(90deg);
+}
+
+/* body.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child {
+    opacity: 0;
+}
+
+body.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+} */

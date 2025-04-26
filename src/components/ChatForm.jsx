@@ -31,7 +31,7 @@ function ChatForm({ chatHistory, setChatHistory, generateBotResponse }) {
     return (
         <form 
             onSubmit={handleFormSubmit}
-            className="chat-form flex items-center bg-[#fff] outline-[1px] outline-dashed outline-[#cccce5] rounded-2xl drop-shadow-lg focus-within:outline-[2px] focus-within:outline-[#6d4fc2] focus-within:outline-double"
+            className="chat-form flex items-center bg-[#fff] outline-[1px] outline-dashed outline-[#cccce5] rounded-2xl drop-shadow-lg focus-within:outline-[2px] focus-within:outline-red-800 focus-within:outline-double"
         >
             <input 
                 type="text" 
@@ -41,7 +41,7 @@ function ChatForm({ chatHistory, setChatHistory, generateBotResponse }) {
                 required 
             />
             <button 
-                className="material-symbols-outlined h-9 w-9 cursor-pointer text-[20px] text-[#fff] flex-shrink-0 mr-2 rounded-full bg-[#6d4fc2] hover:bg-[#593bab] transition-all duration-200 ease-in-out"
+                className="material-symbols-outlined h-9 w-9 cursor-pointer text-[20px] text-[#fff] flex-shrink-0 mr-2 rounded-full bg-red-800 hover:bg-red-900 transition-all duration-200 ease-in-out"
             >arrow_upward</button>
         </form>
     );
